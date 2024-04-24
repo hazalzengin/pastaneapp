@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34729.46
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pastaneapp", "pastaneapp\pastaneapp.csproj", "{B92B0611-135C-4E70-B078-E817B25F2216}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B92B0611-135C-4E70-B078-E817B25F2216}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B92B0611-135C-4E70-B078-E817B25F2216}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B92B0611-135C-4E70-B078-E817B25F2216}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B92B0611-135C-4E70-B078-E817B25F2216}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B5ACF05C-9ECD-4263-9AD2-9AD18B31EF7D}
+	EndGlobalSection
+EndGlobal
