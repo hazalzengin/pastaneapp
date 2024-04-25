@@ -74,6 +74,7 @@ namespace pastaneapp
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -129,6 +130,7 @@ namespace pastaneapp
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Controls.Add(this.comboBox2);
             this.groupBox4.Controls.Add(this.comboBox1);
             this.groupBox4.Controls.Add(this.button6);
@@ -187,6 +189,7 @@ namespace pastaneapp
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(155, 37);
             this.textBox13.TabIndex = 6;
+            this.textBox13.TextChanged += new System.EventHandler(this.textBox13_TextChanged);
             // 
             // label11
             // 
@@ -528,6 +531,15 @@ namespace pastaneapp
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "groupBox6";
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(67, 365);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(105, 37);
+            this.label14.TabIndex = 9;
+            this.label14.Text = "Maliyet:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -603,6 +615,7 @@ namespace pastaneapp
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Label label14;
     }
 }
 

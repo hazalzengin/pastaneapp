@@ -99,6 +99,7 @@ namespace pastaneapp
                 MessageBox.Show("Hata " + ex, "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
+            baglanti.Close();
 
         }
 
@@ -125,6 +126,7 @@ namespace pastaneapp
             komut.Parameters.AddWithValue("@p2", decimal.Parse(textBox3.Text));
             komut.Parameters.AddWithValue("@p3", decimal.Parse(textBox4.Text));
             komut.Parameters.AddWithValue("@p4", textBox5.Text);
+
             komut.ExecuteNonQuery();
             baglanti.Close();
             MessageBox.Show("Malzeme eklenmiştir", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -148,6 +150,23 @@ namespace pastaneapp
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox13_TextChanged(object sender, EventArgs e)
+        {
+            double maliyet;
+            if (textBox13.Text == "")
+            {
+                textBox13.Text = "0";
+            }
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select * from TBLMALZEMELER", baglanti);
+            SqlDataReader dr = komut.ExecuteReader();
+            while (dr.Read())
+            {
+                label14.Text = dr[3].ToString();
+            }
+            baglanti.Close();
         }
     }
 }
