@@ -100,6 +100,7 @@ namespace pastaneapp
 
             }
             baglanti.Close();
+            listBox1.Items.Add(comboBox2.Text + "-" +textBox12.Text);
 
         }
 
@@ -160,13 +161,25 @@ namespace pastaneapp
                 textBox13.Text = "0";
             }
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("select * from TBLMALZEMELER", baglanti);
+            SqlCommand komut = new SqlCommand("select * from TBLMALZEMELER where id=@p1", baglanti);
+            komut.Parameters.AddWithValue("@p1", comboBox2.SelectedValue);
             SqlDataReader dr = komut.ExecuteReader();
             while (dr.Read())
             {
                 label14.Text = dr[3].ToString();
             }
             baglanti.Close();
+            try { 
+                maliyet = Convert.ToDouble(textBox12.Text) / 1000 * Convert.ToDouble(textBox13.Text);
+                textBox12.Text = maliyet.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata " + ex, "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+
+
         }
     }
 }
